@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accessible information portal demo with keyboard-friendly navigation and article search.">
+  <title>Open Page — Accessible Ideas</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Open Page home"><span aria-hidden="true" class="brand-mark">O</span>open<span class="brand-accent">page</span></a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span aria-hidden="true">☰</span><span>Menu</span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+        <a href="#articles">Articles</a><a href="#topics">Topics</a><a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">A thoughtful information portal</p>
+        <h1 id="hero-title">Good ideas should be <span>open to everyone.</span></h1>
+        <p class="hero-copy">A practical reading space for design, technology, and learning—with clarity and accessibility built into the experience.</p>
+        <a class="button primary-button" href="#articles">Explore articles <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="paper-card"><span>READ</span><strong>with clarity.</strong><i></i><i></i><i></i></div></div>
+    </section>
+
+    <section id="articles" class="section" aria-labelledby="articles-title">
+      <div class="section-head"><div><p class="eyebrow">The reading list</p><h2 id="articles-title">Latest articles</h2></div>
+        <form id="search-form" class="search-form" role="search" aria-label="Search articles">
+          <label class="visually-hidden" for="search-input">Search articles</label>
+          <input id="search-input" name="q" type="search" placeholder="Try “design” or “learning”" autocomplete="off">
+          <button type="submit" class="search-button">Search</button>
+        </form>
+      </div>
+      <p id="search-status" class="status" role="status" aria-live="polite" aria-atomic="true">Showing all 3 articles.</p>
+      <div id="article-list" class="article-grid">
+        <article class="article-card" data-keywords="accessibility inclusive design website">
+          <div class="article-art art-peach" aria-hidden="true"><span>01</span><b>DESIGN</b></div>
+          <div class="article-content"><p class="meta">Design <span aria-hidden="true">·</span> <time datetime="2026-10-01">1 October 2026</time></p><h3><a href="#about">Designing for people you cannot see</a></h3><p>Small interface choices can remove barriers and invite more people to participate.</p><a class="read-link" href="#about">Read article <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="article-card" data-keywords="technology wellbeing habits focus">
+          <div class="article-art art-lilac" aria-hidden="true"><span>02</span><b>WELLBEING</b></div>
+          <div class="article-content"><p class="meta">Wellbeing <span aria-hidden="true">·</span> <time datetime="2026-09-24">24 September 2026</time></p><h3><a href="#about">A calmer relationship with technology</a></h3><p>Make everyday digital habits more intentional without chasing perfect routines.</p><a class="read-link" href="#about">Read article <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="article-card" data-keywords="learning beginner programming practice">
+          <div class="article-art art-mint" aria-hidden="true"><span>03</span><b>LEARNING</b></div>
+          <div class="article-content"><p class="meta">Learning <span aria-hidden="true">·</span> <time datetime="2026-09-17">17 September 2026</time></p><h3><a href="#about">Learn a skill by building small things</a></h3><p>Short projects make progress visible and turn abstract concepts into practice.</p><a class="read-link" href="#about">Read article <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
+      <p id="empty-state" class="empty-state" hidden>No articles match your search. Try another word.</p>
+    </section>
+
+    <section id="topics" class="section topics" aria-labelledby="topics-title">
+      <div><p class="eyebrow">Browse by interest</p><h2 id="topics-title">Find your next starting point.</h2></div>
+      <div class="topic-links"><a href="#articles" data-query="design">Design <span aria-hidden="true">↗</span></a><a href="#articles" data-query="technology">Technology <span aria-hidden="true">↗</span></a><a href="#articles" data-query="learning">Learning <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section id="about" class="about section" aria-labelledby="about-title">
+      <div class="about-icon" aria-hidden="true">◎</div><div><p class="eyebrow">Our principle</p><h2 id="about-title">Access is part of good design.</h2><p>Open Page is a fictional information portal created for an accessibility-focused front-end assignment. It demonstrates semantic structure, keyboard-friendly controls, visible focus, and clear feedback.</p></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="#home">open<span class="brand-accent">page</span></a><p>Thoughtful reading, designed for more people.</p><p>© <span id="year">2026</span> Open Page</p></div></footer>
+</body>
+</html>
